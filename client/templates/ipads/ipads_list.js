@@ -12,4 +12,4 @@ Template.ipadsList.events({
             Ipads.remove(currentPostId);
         }
     }
-})
+}) 
