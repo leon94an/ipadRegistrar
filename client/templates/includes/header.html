@@ -1,5 +1,5 @@
 <template name="header">
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" style="height:4em;" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
                 <span class="sr-only">Toggle navigation</span>
@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{pathFor 'ipadsList'}}">Ipad Registration</a>
+            <a class="navbar-brand" style="color:black; font-size:2em; font-family:'alba'" href="{{pathFor 'ipadsList'}}">Ipad Registration</a>
         </div>
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="nav navbar-nav navbar-right">
@@ -15,5 +15,9 @@
             </ul>
         </div>
     </nav>
-    {{#if currentUser}}{{> ipadSubmit}}{{/if}}
+    {{#if currentUser}}
+    <div class="submission">
+        {{> ipadSubmit}}
+    </div>
+    {{/if}}
 </template>

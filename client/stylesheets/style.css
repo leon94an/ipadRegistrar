@@ -1,3 +1,16 @@
+@font-face {
+  font-family:'alba';
+  src:url('/alba.ttf');
+}
+@font-face {
+  font-family:'junegull';
+  src:url('/junegull.ttf');
+}
+@font-face {
+  font-family:'moderna';
+  src:url('/moderna.ttf');
+}
+
 .grid-block,
 .main,
 .post,
@@ -21,8 +34,8 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: -webkit-linear-gradient(#FFCC66, #FFC2C2);
-    color: #000000 ;
+    background: -webkit-linear-gradient(#4DB8FF, #0066FF);
+    color: white;
 }
 
 #main {
@@ -37,9 +50,11 @@ body {
 
 .navbar {
     margin-bottom: 10px;
-    background-color: #B2CCFF;
+    background-color: #FF8533;
+    border: none;
 }
 /* line 32, ../sass/style.scss */
+
 
 .navbar .navbar-inner {
     border-radius: 0px 0px 3px 3px;
@@ -56,7 +71,7 @@ body {
     *zoom: 1;
     position: relative;
     opacity: 1;
-    background-color: #B2CCFF;
+    background-color: #FF8533;
 }
 
 .post:before,
@@ -99,8 +114,9 @@ body {
 
 .post .post-content h3 {
     margin: 0;
-    line-height: 1.4;
-    font-size: 18px;
+    line-height: 1.7em;
+    font-size: 1.7em;
+    font-family: "junegull";
 }
 
 .post .post-content h3 a {
@@ -109,10 +125,12 @@ body {
 }
 
 .post .post-content h3 span {
+    margin-left: 2em;
     font-weight: normal;
-    font-size: 14px;
+    font-size: .9em;
     display: inline-block;
-    color: #aaaaaa;
+    color: #0052A3;
+    font-family: "moderna";
 }
 
 .post .post-content p {
@@ -250,10 +268,33 @@ body {
 .new-task input {
     box-sizing: border-box;
     padding: 1em 0;
-    background: transparent;
-    border: none;
+    background: #588BAD;
+    border: .4em solid black;
     width: 20%;
     padding-left: .5em;
     padding-right: .5em;
     font-size: 1em;
+}
+.new-task input[type="submit"]{
+  color:#FF8533;
+  background-color: white;
+  font-weight: bold ;
+}
+.submission{
+  padding-bottom: 1em
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    black;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    black;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    black;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    black;
 }
