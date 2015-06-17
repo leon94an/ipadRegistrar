@@ -4,7 +4,7 @@ Template.ipadSubmit.events({
     
     var ipad = {
       name: $(e.target).find('[name=name]').val(),
-      location: $(e.target).find('[name=location]').val()
+      location: $(e.target).find('[name=location]').val(),
     };
     
     Meteor.call('ipadInsert', ipad, function(error, result) {

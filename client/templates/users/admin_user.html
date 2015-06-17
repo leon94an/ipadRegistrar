@@ -1,9 +1,9 @@
 <template name="adminUser">
-    <div class="post">
-        <div class="post-content">
-            <h3>{{username}}</h3>
-            {{#each userIpads}} {{> ipadItem}} {{/each}}
+    <div class="user">
+        <div class="user-content">
+            <h3>Username: {{username}}</h3>
         </div>
-        <a class="edit btn btn-default" href="#">Edit</a>   
-  </div>
+    </div>
+    {{#each userIpads}} {{> ipadItem}} {{/each}}
+
 </template>

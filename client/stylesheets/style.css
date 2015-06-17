@@ -1,19 +1,22 @@
 @font-face {
-  font-family:'alba';
-  src:url('/alba.ttf');
+    font-family: 'alba';
+    src: url('/alba.ttf');
 }
+
 @font-face {
-  font-family:'junegull';
-  src:url('/junegull.ttf');
+    font-family: 'junegull';
+    src: url('/junegull.ttf');
 }
+
 @font-face {
-  font-family:'moderna';
-  src:url('/moderna.ttf');
+    font-family: 'moderna';
+    src: url('/moderna.ttf');
 }
 
 .grid-block,
 .main,
 .post,
+.user,
 .comments li,
 .comment-form {
     background: #fff;
@@ -42,7 +45,6 @@ body {
     position: relative;
 }
 
-
 .page {
     position: absolute;
     top: 0px;
@@ -55,7 +57,6 @@ body {
     border: none;
 }
 /* line 32, ../sass/style.scss */
-
 
 .navbar .navbar-inner {
     border-radius: 0px 0px 3px 3px;
@@ -134,10 +135,10 @@ body {
     font-family: "moderna";
 }
 
-.post .edit{
+.post .edit {
     display: block;
     float: right;
-    margin-top: 7px;
+    margin-top: .5em;
     margin-right: .5em;
     color: #fff;
     background-color: #E6E600;
@@ -286,34 +287,81 @@ body {
     padding-right: .5em;
     font-size: 1em;
 }
-.new-task input[type="submit"]{
-  color:#FF8533;
-  background-color: white;
-  font-weight: bold ;
-}
-.submission{
-  padding-bottom: 1em
-}
-.return{
-    background-color:#B5B5B5;
+
+.new-task input[type="submit"] {
+    color: #FF8533;
+    background-color: white;
+    font-weight: bold;
 }
 
-.users h3{
+.submission {
+    padding-bottom: 1em
+}
+
+.return {
+    background-color: #B5B5B5;
+}
+
+.users h3 {
     margin-left: .3em;
 }
 
+.user {
+    *zoom: 1;
+    position: relative;
+    opacity: 1;
+    background-color: #FF5050;
+    height: 4em;
+}
 
-::-webkit-input-placeholder { /* WebKit browsers */
-    color:    black;
+.user .user-content {
+    float: left;
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    black;
-   opacity:  1;
+
+.user .user-content h3 {
+    margin: 0;
+    line-height: 1.7em;
+    font-size: 1.7em;
+    color: black;
+    font-family: "junegull";
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    black;
-   opacity:  1;
+
+.user .edit {
+    float: right;
 }
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-   color:    black;
+
+.manage{
+    display: block;
+    border: .2em solid blue;
+    margin-top: 1em;
+    padding: .5em .5em;
+    background-color: #7A52CC;
+    color: #FFFFFF;
+
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    
+    color: black;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    
+    color: black;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    
+    color: black;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    
+    color: black;
 }
