@@ -1,5 +1,6 @@
 Template.adminUser.helpers({
     userIpads: function() {
-        return Ipads.find({author: username});
+    	var currentUserId = Meteor.userId();
+        return Ipads.find({name:Meteor.user().username});
     }
 });
