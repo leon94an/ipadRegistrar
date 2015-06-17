@@ -298,6 +298,10 @@ body {
     background-color:#B5B5B5;
 }
 
+.users h3{
+    margin-left: .3em;
+}
+
 
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    black;

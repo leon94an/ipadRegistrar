@@ -1,8 +1,8 @@
 <template name="layout">
-  <div class="container">
-    {{> header}}
-    <div id="main">
-      {{#if currentUser}}{{> yield}}{{/if}}
+    <div class="container">
+        {{> header}}
+        <div id="main">
+            {{#if currentUser}} {{> yield}}{{/if}}
+        </div>
     </div>
-  </div>
 </template>

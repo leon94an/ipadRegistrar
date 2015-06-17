@@ -1,7 +1,12 @@
 <template name="ipadsList">
-  <div class="posts page">
-    {{#each ipads}}
-      {{> ipadItem}}
-    {{/each}}
-  </div>
+
+    <div class="posts page">
+    	<a href="{{pathFor 'users'}}" style="float:right">Manage User</a>
+
+        <div class="submission">
+            {{> ipadSubmit}}
+        </div>
+        {{#each ipads}} {{> ipadItem}} {{/each}}
+    </div>
+
 </template>
