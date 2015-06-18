@@ -13,6 +13,11 @@
     src: url('/moderna.ttf');
 }
 
+@font-face {
+    font-family: 'optien';
+    src: url('/optien.ttf');
+}
+
 .grid-block,
 .main,
 .post,
@@ -323,7 +328,7 @@ body {
     line-height: 1.7em;
     font-size: 1.7em;
     color: black;
-    font-family: "junegull";
+    font-family: "optien";
 }
 
 .user .user-content h3 span{
