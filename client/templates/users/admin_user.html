@@ -1,8 +1,11 @@
 <template name="adminUser">
     <div class="user">
         <div class="user-content">
-            <h3>Username: {{username}}</h3>
+            <h3>Username: {{username}}<span>{{roles}}</span></h3>
         </div>
+        {{#if notAdmin}}
+        <a class="admin btn btn-default" href="#">Make Admin</a> 
+        {{/if}}  
     </div>
     {{#each userIpads}} {{> ipadItem}} {{/each}}
 

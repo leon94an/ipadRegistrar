@@ -326,7 +326,17 @@ body {
     font-family: "junegull";
 }
 
+.user .user-content h3 span{
+    margin-left: .5em;
+    color: #0052A3;
+
+}
+
 .user .edit {
+    float: right;
+}
+
+.user .admin {
     float: right;
 }
 

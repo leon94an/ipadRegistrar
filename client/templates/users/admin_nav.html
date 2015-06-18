@@ -1,0 +1,7 @@
+<template name="adminNav">
+    <div class="users page">
+        <h3> Admin Management</h3> {{#each users}} {{> adminUser}} {{/each}}
+        <hr/>
+        <a class="btn btn-default return" href="{{pathFor 'ipadsList'}}">return</a>
+    </div>
+</template>

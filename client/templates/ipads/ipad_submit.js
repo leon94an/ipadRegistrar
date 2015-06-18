@@ -7,11 +7,12 @@ Template.ipadSubmit.events({
       location: $(e.target).find('[name=location]').val(),
     };
     
-    Meteor.call('ipadInsert', ipad, function(error, result) {
-      // display the error to the user and abort
-      if (error)
-        return alert(error.reason);
+    // Meteor.call('ipadInsert', ipad, function(error, result) {
+    //   // display the error to the user and abort
+    //   if (error)
+    //     return alert(error.reason);
        
-    });
+    // });
+    Ipads.insert(ipad);
   }
 });

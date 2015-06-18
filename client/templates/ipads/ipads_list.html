@@ -1,8 +1,11 @@
 <template name="ipadsList">
 
     <div class="posts page">
+    	{{#if isInRole 'admin'}}
+            <a class="manage" href="{{pathFor 'admin'}}" style="float:right">Manage Users</a>
+  		{{/if}}
     	<a class="manage" href="{{pathFor 'users'}}" style="float:right">Manage Submissions</a>
-
+		
         <div class="submission">
             {{> ipadSubmit}}
         </div>
