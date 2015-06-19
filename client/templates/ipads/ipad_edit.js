@@ -8,6 +8,7 @@ Template.ipadEdit.events({
             name: $target.find('[name=name]').val(),
             location: $target.find('[name=location]').val(),
         };
+        
         if (confirm("Confirm this change?")) {
             Ipads.update(currentIpadId, {
                 $set: ipadProperties

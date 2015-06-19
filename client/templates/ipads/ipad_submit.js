@@ -1,5 +1,5 @@
 Template.ipadSubmit.events({
-  'submit form': function(e) {
+  'submit form': function(e,template) {
     e.preventDefault();
     var $target = $(e.target)
     var ipad = {
@@ -7,12 +7,8 @@ Template.ipadSubmit.events({
       location: $target.find('[name=location]').val(),
     };
     
-    // Meteor.call('ipadInsert', ipad, function(error, result) {
-    //   // display the error to the user and abort
-    //   if (error)
-    //     return alert(error.reason);
-       
-    // });
     Ipads.insert(ipad);
+    template.find("form").reset();
+
   }
 });
