@@ -1,12 +1,17 @@
 <template name="adminUser">
-    <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <h3>Username: {{username}}{{roles}}</h3></div>
-        <div class="col-md-3 col-md-offset-3 col-sm-6 col-xs-12">
-        	{{#if notAdmin}}
-            <a class="admin btn btn-default" href="#">Make Admin</a> 
-           {{/if}} 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-7">
+                    Username: {{username}}{{roles}}</div>
+                <div class="col-md-3 col-md-offset-3 col-sm-6 col-xs-5">
+                    {{#if notAdmin}}
+                    <a class="admin btn btn-default" style="float:right;" href="#">Make Admin</a> {{/if}}
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            {{#each userIpads}} {{> ipadItem}} {{/each}}
         </div>
     </div>
-		{{#each userIpads}} {{> ipadItem}} {{/each}}
 </template>
