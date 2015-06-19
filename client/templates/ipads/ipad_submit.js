@@ -1,10 +1,10 @@
 Template.ipadSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
-    
+    var $target = $(e.target)
     var ipad = {
-      name: $(e.target).find('[name=name]').val(),
-      location: $(e.target).find('[name=location]').val(),
+      name: $target.find('[name=name]').val(),
+      location: $target.find('[name=location]').val(),
     };
     
     // Meteor.call('ipadInsert', ipad, function(error, result) {

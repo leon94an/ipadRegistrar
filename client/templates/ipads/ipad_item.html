@@ -4,8 +4,10 @@
             <h3>{{name}}<span>{{location}}</span></h3>
         </div>
         {{#if ownIpad}} 
-        <a class="delete btn btn-default" href="#">Delete</a>
-        <a class="edit btn btn-default" href="{{pathFor 'ipadEdit'}}">Edit</a>   
+        <div class="buttons">
+        	<a class="edit btn btn-default" href="{{pathFor 'ipadEdit'}}">Edit</a> 
+        	<a class="delete btn btn-default" href="#">Delete</a>
+        </div>  
         {{/if}}
   </div>
 </template>
