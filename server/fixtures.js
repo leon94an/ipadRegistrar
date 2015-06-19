@@ -9,7 +9,8 @@ if ( Meteor.users.find().count() === 0 ) {
             company: 'company',
         },
     });
-    Roles.removeUsersFromRoles(account, 'basic');
     Roles.addUsersToRoles(account, 'admin');
+    Roles.removeUsersFromRoles(account, 'basic');
+
 
 }

@@ -8,21 +8,37 @@ Template.ipadEdit.events({
             name: $target.find('[name=name]').val(),
             location: $target.find('[name=location]').val(),
         };
-        
-        if (confirm("Confirm this change?")) {
-            Ipads.update(currentIpadId, {
-                $set: ipadProperties
-            }, function(error) {
-                if (error) {
-                    // display the error to the user
-                    alert(error.reason);
-                } else {
-                    Router.go('ipadEdit', {
-                        _id: currentIpadId
+        EZModal({
+            title: 'Please Confirm',
+            body: 'Are you sure you wish to edit the contents?',
+            leftButtons: [{
+                color: 'danger',
+                html: 'Cancel'
+            }],
+            rightButtons: [{
+                color: 'primary',
+                html: 'Yes',
+                fn: function(e, tmpl) {
+                    Ipads.update(currentIpadId, {
+                        $set: ipadProperties
+                    }, function(error) {
+                        if (error) {
+                            // display the error to the user
+                            EZModal(error.reason);
+                        } else {
+                            Router.go('ipadEdit', {
+                                _id: currentIpadId
+                            });
+                        }
                     });
+                    return this.EZModal.modal('hide');
                 }
-            });
-        }
+            }]
+        });
+       
     },
+
+
+
 
 });
