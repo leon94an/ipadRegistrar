@@ -1,9 +1,10 @@
 <template name="mySubmissions">
 
-    <div class="posts page">
+    <div>
         <h3> My Ipad Submissions</h3>
         <hr/>
         {{#each myIpads}} {{> ipadItem}} {{/each}}
+         <a class="btn btn-default return" href="{{pathFor 'ipadsList'}}">return</a>
     </div>
 
 </template>

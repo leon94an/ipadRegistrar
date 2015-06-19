@@ -1,13 +1,16 @@
 <template name="ipadItem">
-    <div class="post">
-        <div class="post-content">
-            <h3>{{name}}<span>{{location}}</span></h3>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-6 col-sm-8">{{name}} {{location}}</div>
+                <div class="col-md-3 col-md-offset-3 col-sm-4">{{#if ownIpad}}
+                    <div class="buttons">
+                        <a class="edit btn btn-default" href="{{pathFor 'ipadEdit'}}">Edit</a>
+                        <a class="delete btn btn-default" href="#">Delete</a>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
         </div>
-        {{#if ownIpad}} 
-        <div class="buttons">
-        	<a class="edit btn btn-default" href="{{pathFor 'ipadEdit'}}">Edit</a> 
-        	<a class="delete btn btn-default" href="#">Delete</a>
-        </div>  
-        {{/if}}
-  </div>
+    </div>
 </template>
